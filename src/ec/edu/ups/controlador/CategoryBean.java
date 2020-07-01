@@ -21,6 +21,7 @@ public class CategoryBean implements Serializable {
 
     @EJB
     private CategoryFacade ejbCategoryFacade;
+    
     private List<Category> list;
     private String descripcion;
 
@@ -30,8 +31,8 @@ public class CategoryBean implements Serializable {
     
     @PostConstruct
     public void init() {
-	ejbCategoryFacade.create(new Category("Hola"));
-	ejbCategoryFacade.create(new Category("1211"));
+	//ejbCategoryFacade.create(new Category("Hola"));
+	//ejbCategoryFacade.create(new Category("1211"));
 	list = ejbCategoryFacade.findAll();
     }
         
